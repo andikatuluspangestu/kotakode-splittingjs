@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>DEMO Splitting JS</title>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js">
+  <style>
+   *{box-sizing: border-box;}
+body{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+	background-color: #fff;	
+}
+h1{
+	font-weight: 900;
+	font-size: 5vw;
+	line-height: 5vw;
+  color: green;
+  margin: 60px;
+}
+h1 span{
+	animation: glowtext 3000ms infinite both;
+	animation-delay: calc((var(--char-index) + 1 ) * 400ms);
+	text-transform: uppercase;
+}
+
+@keyframes glowtext{
+	0%{
+		font-size: 7vw;
+	}
+	60%{
+		font-size: 13vw;
+	}
+	100%{
+		font-size: 7vw;
+	}
+}
+  </style>
+</head>
+<body>
+<h1 data-splitting>Kotakode</h1>
+<script>Splitting();</script>
+</body>
+</html>
